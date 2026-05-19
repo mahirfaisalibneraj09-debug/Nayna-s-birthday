@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Accept the Gift</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card-container {
+            background: white;
+            width: 90%;
+            max-width: 450px;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hide the radio buttons used for switching screens */
+        .screen-toggle {
+            display: none;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #111;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .image-box {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Buttons Styling */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0044cc;
+            color: white;
+            text-decoration: none;
+            padding: 12px 35px;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.1s ease;
+        }
+
+        /* Alignment adjustment for the link button */
+        a.btn {
+            line-height: normal;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Default state: Hide all screens */
+        .screen {
+            display: none;
+        }
+
+        /* Logic to show the correct screen based on which radio button is selected */
+        #show-screen-1:checked ~ #screen-1 {
+            display: block;
+        }
+
+        #show-screen-2:checked ~ #screen-2 {
+            display: block;
+        }
+
+        #show-screen-3:checked ~ #screen-3 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <input type="radio" name="screen-group" id="show-screen-1" class="screen-toggle" checked>
+        <input type="radio" name="screen-group" id="show-screen-2" class="screen-toggle">
+        <input type="radio" name="screen-group" id="show-screen-3" class="screen-toggle">
+
+        <div class="screen" id="screen-1">
+            <h1>Pls Accept the Gift</h1>
+            <div class="image-box">
+                <img src="cute.jpg" alt="Cute puppy asking">
+            </div>
+            <div class="btn-group">
+                <label for="show-screen-3" class="btn">YES</label>
+                <label for="show-screen-2" class="btn">NO</label>
+            </div>
+        </div>
+
+        <div class="screen" id="screen-2">
+            <h1>How Dare You!</h1>
+            <div class="image-box">
+                <img src="download.jpg" alt="Angry dog staring">
+            </div>
+            <div class="btn-group">
+                <label for="show-screen-1" class="btn">TRY AGAIN</label>
+            </div>
+        </div>
+
+        <div class="screen" id="screen-3">
+            <h1>Thats a Goodgirl</h1>
+            <div class="image-box">
+                <img src="download(1).jpg" alt="Good girl puppy with rose">
+            </div>
+            <div class="btn-group">
+                <a href="cake.html" class="btn">NEXT</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
